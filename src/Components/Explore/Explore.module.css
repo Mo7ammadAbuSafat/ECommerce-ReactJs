@@ -1,0 +1,208 @@
+
+
+.ExploreT{
+    background-color: rgba(192, 192, 192, 0.1);
+    padding-bottom:30px ;
+}
+.Explore{
+    padding: 0 150px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    height: 560px;
+
+}
+
+.Explore .left{
+    border-top: 2px solid rgba(0, 0, 0, 0.482);
+    display: grid;
+    grid-template-rows: 280px 280px;
+    height: 100%;
+}
+
+.Explore .left .text{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Explore .left img{
+    height: 280px;
+    object-fit: cover;
+    width: 100% ;
+}
+.Explore .right{
+    display: grid;
+    grid-template-rows: 280px 280px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+.Explore .left .p1{
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    color: rgba(51, 51, 58, 0.581);
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.Explore .left h2{
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    color: rgba(51,51,58,1);
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 50px;
+}
+
+.Explore .left .p2{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    opacity: 1;
+    color: rgba(51,51,58,1);    
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.Explore .Card{
+    border-top: 2px solid rgba(0, 0, 0, 0.482);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-evenly;
+}
+
+.Card .top{
+    padding-top: 20px;
+}
+
+.Explore .right .p1{
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    color: rgba(51, 51, 58, 0.581);
+    font-size: 11px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.Explore .right h2{
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    color: rgba(51,51,58,1);
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 25px;
+    height: 70px;
+}
+
+.Explore .right .p2{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    opacity: 1;
+    color: rgba(51,51,58,1);    
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.Explore .right img{
+    width: 80%;
+    object-fit: cover;
+}
+
+.Explore+ .button{
+    width: 180px;
+    height: 40px;
+    opacity: 1;
+    color: rgba(255,255,255,1);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color: #33333A;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+@media screen and (max-width:1100px){
+    .Explore{
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .Explore{
+        padding: 0 50px;
+        grid-template-columns:1fr;
+        gap: 0;
+        padding: 0 150px;
+        height: 1120px;
+    }
+    .left{
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width:750px){
+    .Explore{
+        padding: 0 50px;
+    }
+
+    .Explore .left img{
+        height: 200px;
+        margin-top: 25px;
+    }
+
+    .Explore .left {
+        padding-top: 15px;
+    }
+    
+}
+
+@media screen and (max-width:500px){
+    .Explore{
+        padding: 0 10px;
+    }
+    
+}
+@media screen and (max-width:400px){
+    .Explore .right .p1,.Explore .right .p2,.Explore .right h2{
+        font-size: 11px;
+    }
+    
+}
+

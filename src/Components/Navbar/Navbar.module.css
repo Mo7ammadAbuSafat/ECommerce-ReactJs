@@ -1,0 +1,181 @@
+.Navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+    height: 80px;
+    font-size: 15px;
+    color: rgba(129, 129, 129);
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.Navbar .Menu{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 120px);    
+}
+
+.burgerMenu{
+    display: none;
+}
+
+.Navbar ul,.Navbar li {
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.Navbar .LeftSubMenu li img{
+    width: 6px;
+    height: 3px;
+}
+
+.Navbar > img{
+    width: 120px;
+    margin-right: 40px;
+}
+
+.Navbar .LeftSubMenu, .LeftSubMenu ul{
+    display: flex;
+    align-items: center;
+}
+
+.LeftSubMenu li {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.LeftSubMenu li img{
+    margin-left: 1px;
+}
+
+
+.RightSubMenu .ul1{
+    display: flex;
+    align-items: center;
+}
+
+.RightSubMenu .ul1 li{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.RightSubMenu .ul1 img{
+    opacity: .65;
+}
+
+.burgerMenuItems{
+    width: 0px;
+    height: 0px;
+    color: #33333A;
+}
+.burgerMenuItems .div1{
+    width: 0px;
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    transition: all 0.3s ease-out;
+}
+.burgerMenuItems li{
+    border-bottom: 1px solid #33333a4f;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.burgerMenuItems li i{
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.displayNone{
+   width: 0 !important;
+}
+
+@media screen and (max-width:1100px)and (min-width:850px) {
+    .Navbar{
+        padding: 0 70px;
+    }
+}
+
+@media screen and (max-width:950px)and (min-width:850px){
+    .LeftSubMenu li {
+        margin-right: 20px;
+    }
+
+    .RightSubMenu .ul1 li{
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width:850px){
+    .burgerMenuItems .div1{
+        width: 100vw;
+    }
+    .Navbar{
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+    .Navbar > img{
+        width: 120px;
+        margin-right: 20px;
+    }
+
+    .burgerMenu{
+        display: block;
+        width: 22px;
+        height: 18px;
+        opacity: .55;
+        margin-left: 30px;
+    }
+
+    .Navbar .Menu{
+        justify-content: end;
+        width: calc(100% - 120px);    
+    }
+
+    .LeftSubMenu ul{
+        display:none;
+    }
+
+    .RightSubMenu .ul1 li{
+        margin-left: 30px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:600px){
+    .burgerMenuItems .div1{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:500px){
+    .Navbar{
+        height: 60px;
+    }
+    .RightSubMenu .ul1 li,.burgerMenu{
+        margin-left: 15px;
+    }
+
+    .burgerMenuItems .div1{
+        width: 100vw;
+        top:100px
+    }
+}
+
+

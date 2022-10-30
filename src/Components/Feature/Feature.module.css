@@ -1,0 +1,104 @@
+.Feature{
+    padding: 0 150px;
+    background-color: rgba(192, 192, 192, .1);
+    padding-bottom: 30px;
+}
+
+.Feature .itemsContainer{
+    padding: 20px 0;
+    display:grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit,minmax(265px,1fr));
+}
+
+.itemsContainer .Item{
+    padding: 15px;
+    width: 265px;
+   /* height: 480px;*/
+    margin: auto;
+    transition: all 0.5s ease-out;
+}
+
+.itemsContainer .Item:hover{
+    background-color: white;
+}
+
+
+.itemsContainer .Item:hover img{
+    filter: brightness(50%);
+}
+
+.itemsContainer .Item:hover .buttonForItem{
+    z-index: 3;
+}
+
+
+.Item .img{
+    height: 390px;
+    width: 100%;
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+
+.Item .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+
+.Item .img .new2{
+    background-color: #FF6008;
+    color: white;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.Feature .buttonForItem{
+    background-color: #33333A;
+    color: white;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -230px;
+    z-index: -1;
+    margin: auto;
+    overflow: hidden;
+}
+
+.Feature .buttonForItem:hover{
+    cursor: pointer;
+}
+
+.Item .img .displayNone{
+    display:none;
+}
+
+@media screen and (max-width:900px){
+    .Feature{
+        padding: 0 60px;
+    }
+
+}
+@media screen and (max-width:600px){
+    .Feature{
+        padding: 0 40px;
+    }
+
+}
+@media screen and (max-width:360px){
+    .Feature{
+        padding: 0 5px;
+    }
+
+}

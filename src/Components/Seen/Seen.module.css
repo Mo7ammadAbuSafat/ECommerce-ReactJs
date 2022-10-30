@@ -1,0 +1,9 @@
+.Seen img{
+    margin: 20px auto;
+    width: 60%;
+}
+
+.Seen{
+    display: flex;
+    justify-content: center;
+}

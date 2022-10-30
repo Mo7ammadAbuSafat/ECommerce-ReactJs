@@ -1,0 +1,114 @@
+.Footer{
+    padding: 70px 150px 0px 150px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #33333A;
+    opacity: 1;
+    color: rgba(222,222,222,1);
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 25px;
+    overflow: hidden;
+}
+.Copyright{
+    margin-top: 30px;
+    height: 40px;
+}
+.Footer ul{
+    display: block;
+    width: 120px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    
+}
+
+.Footer ul li:first-child{
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+.Footer ul li{
+    font-size: 1.2em;
+}
+.Footer .FooterMenu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Footer .rightFooter{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.Footer .rightFooter .subscribe{
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.Footer .inputFooter{
+    display: flex;
+    align-items: center;
+}
+
+.Footer .inputFooter input{
+    width: 65%;
+    height: 40px;
+    background-color:#33333A ;
+    opacity: 1;
+    color: rgba(222,222,222,1);
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: left;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: .1px solid rgba(222,222,222,1);
+    padding-left:10px ;
+}
+.Footer .inputFooter button{
+    width: 30%;
+    margin-left: 5%;
+    height: 40px;
+    color: #33333A;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.Footer .icon{
+    margin-top: 20px;
+}
+.Footer .icon img{
+    margin-left: 15px;
+}
+
+@media screen and (max-width:750px){
+    .Footer{
+        padding: 70px 70px 30px 70px;
+    }
+}
+@media screen and (max-width:500px){
+    .Footer{
+        padding: 70px 30px 30px 30px;
+    }
+    .Footer .inputFooter input,.Footer .inputFooter button{
+        height: 30px;
+        color: #33333A;
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
