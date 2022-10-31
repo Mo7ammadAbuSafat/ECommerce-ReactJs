@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const NamePriceRatePart = (props) => {
-  const rate = 4;
-  const price = 90;
-  const name = "The Sideswipe Dhoti + Bottom Line Grey (Silk)";
+const NamePriceRatePart = ({ data }) => {
+  const rate = data.rate;
+  const price = data.price;
+  const name = data.name;
   return (
     <div className="namePriceRatePart">
       <p className="name">{name}</p>

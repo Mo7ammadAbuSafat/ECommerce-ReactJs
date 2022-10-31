@@ -4,11 +4,11 @@ import NamePriceRatePart from "./NamePriceRatePart";
 import SizePart from "./SizePart";
 import Quantity from "./Quantity";
 
-function DetailsPart(props) {
+function DetailsPart({ data }) {
   return (
     <div className="details">
-      <NamePriceRatePart />
-      <Description />
+      <NamePriceRatePart data={data} />
+      <Description>{data.description}</Description>
       <SizePart />
       <Quantity />
     </div>

@@ -1,70 +1,160 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Feature.module.css";
 import Title from "../SharedComponents/Title";
 import Item from "./Item";
-import CustomizedDialogs from "./MaterialUi";
+import MaxWidthDialog from "./MaterialUi";
 
 const Feature = () => {
   const itemsData = [
     {
-      name: "Pueraria Mirifica And Study Phyto Estrogens",
+      name: "And Study Phyto Estrogens",
+      description:
+        "Everywhere from South Asia to the Horn of Africa and southern Arabian pen",
+      price: 120.0,
+      rate: 5,
+      imgs: [
+        "icons/i2.png",
+        "icons/i3.png",
+        "icons/i4.png",
+        "icons/i5.png",
+        "icons/i6.png",
+      ],
+      isNew: false,
+    },
+    {
+      name: "Phyto Estrogens",
+      description:
+        "Inspired by the continuous length of the lungki or sarong seen in hot climates Africa and southern Arabian pen",
       price: 599.0,
-      imgSrc: "icons/i1.png",
-      new1: true,
+      rate: 4,
+      imgs: [
+        "icons/i1.png",
+        "icons/i2.png",
+        "icons/i3.png",
+        "icons/i4.png",
+        "icons/i5.png",
+      ],
+      isNew: true,
     },
     {
       name: "Pueraria Mirifica And Study Phyto Estrogens",
-      price: 599.0,
-      imgSrc: "icons/i2.png",
-      new1: false,
+      description:
+        "Inspired by the continuous length of the lungki or sarong seen in hot climates everywhere from South Asia to the Horn of Africa and southern Arabian pen",
+      price: 799.0,
+      rate: 2,
+      imgs: [
+        "icons/i3.png",
+        "icons/i2.png",
+        "icons/i4.png",
+        "icons/i5.png",
+        "icons/i6.png",
+      ],
+      isNew: false,
     },
     {
       name: "Pueraria Mirifica And Study Phyto Estrogens",
-      price: 599.0,
-      imgSrc: "icons/i3.png",
-      new1: true,
+      description:
+        "Inspired by the continuous length of the lungki or sarong seen in hot climates everywhere from South Asia to the Horn of Africa and southern Arabian pen",
+      price: 690.0,
+      rate: 4,
+      imgs: [
+        "icons/i4.png",
+        "icons/i2.png",
+        "icons/i3.png",
+        "icons/i5.png",
+        "icons/i6.png",
+      ],
+      isNew: false,
     },
     {
       name: "Pueraria Mirifica And Study Phyto Estrogens",
-      price: 599.0,
-      imgSrc: "icons/i4.png",
-      new1: true,
+      description:
+        "Inspired by the continuous length of the lungki or sarong seen in hot climates everywhere from South Asia to the Horn of Africa and southern Arabian pen",
+      price: 555.0,
+      rate: 0,
+      imgs: ["icons/i5.png", "icons/i2.png", "icons/i3.png", "icons/i6.png"],
+      isNew: true,
     },
     {
       name: "Pueraria Mirifica And Study Phyto Estrogens",
-      price: 599.0,
-      imgSrc: "icons/i5.png",
-      new1: true,
+      description:
+        "Inspired by the continuous length of the lungki or sarong seen in hot climates everywhere from South Asia to the Horn of Africa and southern Arabian pen",
+      price: 500.0,
+      rate: 1,
+      imgs: [
+        "icons/i6.png",
+        "icons/i2.png",
+        "icons/i3.png",
+        "icons/i4.png",
+        "icons/i5.png",
+      ],
+      isNew: true,
     },
     {
       name: "Pueraria Mirifica And Study Phyto Estrogens",
-      price: 599.0,
-      imgSrc: "icons/i6.png",
-      new1: true,
+      description:
+        "Inspired by the continuous length of the lungki or sarong seen in hot climates everywhere from South Asia to the Horn of Africa and southern Arabian pen",
+      price: 888.0,
+      rate: 3,
+      imgs: [
+        "icons/i7.png",
+        "icons/i2.png",
+        "icons/i3.png",
+        "icons/i4.png",
+        "icons/i5.png",
+      ],
+      isNew: true,
     },
     {
       name: "Pueraria Mirifica And Study Phyto Estrogens",
+      description:
+        "Inspired by the continuous length of the lungki or sarong seen in hot climates everywhere from South Asia to the Horn of Africa and southern Arabian pen",
       price: 599.0,
-      imgSrc: "icons/i7.png",
-      new1: false,
-    },
-    {
-      name: "Pueraria Mirifica And Study Phyto Estrogens",
-      price: 599.0,
-      imgSrc: "icons/i8.png",
-      new1: false,
+      rate: 5,
+      imgs: [
+        "icons/i1.png",
+        "icons/i2.png",
+        "icons/i3.png",
+        "icons/i4.png",
+        "icons/i5.png",
+        "icons/i6.png",
+      ],
+      isNew: true,
     },
   ];
 
-  const items = itemsData.map((itemPro) => {
-    return <Item {...itemPro} />;
+  const [IndexShow, setIndexShow] = useState(0);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const items = itemsData.map((itemPro, index) => {
+    return (
+      <Item
+        data={itemsData}
+        Index={index}
+        setIndexShow={setIndexShow}
+        handleClickOpen={handleClickOpen}
+      />
+    );
   });
 
   return (
     <div className={styles.Feature}>
       <Title text="Feature" />
       <div className={styles.itemsContainer}>{items}</div>
-      <CustomizedDialogs />
+      <MaxWidthDialog
+        data={itemsData}
+        IndexShow={IndexShow}
+        open={open}
+        handleClose={handleClose}
+      />
     </div>
   );
 };

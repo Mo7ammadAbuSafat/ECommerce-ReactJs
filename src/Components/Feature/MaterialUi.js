@@ -27,33 +27,19 @@ export const Custom = ({ name, onClose }) => {
   );
 };
 
-export default function MaxWidthDialog() {
-  const [open, setOpen] = React.useState(false);
-  const [fullWidth, setFullWidth] = React.useState(true);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+export default function MaxWidthDialog({ data, IndexShow, handleClose, open }) {
   return (
     <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open max-width dialog
-      </Button>
       <Dialog
-        fullWidth={fullWidth}
+        fullWidth={true}
         maxWidth={"lg"}
         open={open}
         onClose={handleClose}
       >
-        <Custom name={"ahmad"} onClose={handleClose} />
+        <Custom name={data[IndexShow].name} onClose={handleClose} />
 
         <DialogContent>
-          <ContentPopup />
+          <ContentPopup data={data[IndexShow]} />
         </DialogContent>
       </Dialog>
     </React.Fragment>

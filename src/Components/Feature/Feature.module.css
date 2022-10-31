@@ -74,6 +74,7 @@
     z-index: -1;
     margin: auto;
     overflow: hidden;
+    border:none;
 }
 
 .Feature .buttonForItem:hover{
