@@ -1,8 +1,8 @@
 .Title{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-
 
 .Title h1{
     margin: 55px 0 10px 0;
@@ -13,8 +13,52 @@
     text-align: center;
     line-height: 60px;
 }
+
 @media screen and (max-width:680px){
     .Title h1{
         font-size: 2em;
+    }
+}
+
+.TitleForShop{
+    position: relative;
+    top:-60px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.TitleForShop h1{
+    opacity: 1;
+    color: rgba(3,3,3,1);
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 90px;
+    margin-bottom: 20px;
+}
+
+.TitleForShop p{
+    opacity: 1;
+    color: rgba(3,3,3,1);
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 0;
+    width: 450px;
+}
+
+@media screen and (max-width:680px){
+
+    .TitleForShop h1{
+        font-size: 50px;
+    }
+    .TitleForShop p{
+        width: 350px;
     }
 }

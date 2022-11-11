@@ -4,11 +4,11 @@
     padding-bottom: 30px;
 }
 
-.Feature .itemsContainer{
-    padding: 20px 0;
+.itemsContainer{
     display:grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fit,minmax(265px,1fr));
+    margin-bottom: 50px;
 }
 
 .itemsContainer .Item{
@@ -32,6 +32,9 @@
     z-index: 3;
 }
 
+.Item{
+    height: 480px;
+}
 
 .Item .img{
     height: 390px;
@@ -61,7 +64,7 @@
     left: 12px;
 }
 
-.Feature .buttonForItem{
+.buttonForItem{
     background-color: #33333A;
     color: white;
     width: 180px;
@@ -77,7 +80,7 @@
     border:none;
 }
 
-.Feature .buttonForItem:hover{
+.buttonForItem:hover{
     cursor: pointer;
 }
 
