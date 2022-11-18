@@ -11,7 +11,7 @@ const Quantity = (props) => {
           <div
             className={styles.minus}
             onClick={() => {
-              if (amount > 0) setAmount(amount - 1);
+              if (amount > 1) setAmount(amount - 1);
             }}
           >
             -

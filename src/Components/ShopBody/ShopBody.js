@@ -3,10 +3,21 @@ import NAvList from "../NavList/NavList";
 import styles from "./ShopBody.module.css";
 import ItemsContainer from "../Feature/ItemsContainer";
 import Data from "../../Data";
+import HeaderShop from "./HeaderShop";
+import Cover from "../Cover/Cover";
+import TitleForShop from "../SharedComponents/TitleForShop";
 
 function ShopBody(props) {
   let itemsData = [...Data];
   const [compareForSort, setCompareForSort] = useState("none");
+  const [categorySelected, setCategorySelected] = useState(["none", "none"]);
+  if (categorySelected[0] != "none") {
+    itemsData = itemsData.filter(
+      (item) =>
+        item.category[0] == categorySelected[0] &&
+        item.category[1] == categorySelected[1]
+    );
+  }
 
   if (compareForSort == "price") {
     itemsData = [...itemsData].sort((a, b) => a.price - b.price);
@@ -16,28 +27,29 @@ function ShopBody(props) {
     itemsData = [...itemsData].sort((a, b) => b.rate - a.rate);
   }
   return (
-    <div className={styles.ShopBody}>
-      <div className={styles.header}>
-        <p>Women</p>
-        <div>
-          Sort by
-          <select onChange={(e) => setCompareForSort(e.target.value)}>
-            <option selected value="none">
-              NONE
-            </option>
-            <option value="price">PRICE</option>
-            <option value="rate">RATE</option>
-            <option value="name">NAME</option>
-          </select>
+    <>
+      <Cover imgSrc={"../icons/Apearals.png"}>
+        <TitleForShop
+          name={categorySelected[0] != "none" ? categorySelected[0] : "Shop"}
+          description="White Gold began gaining popularity in the early 1900’s as an alternative to platinum. "
+        />
+      </Cover>
+      <div className={styles.ShopBody}>
+        <HeaderShop
+          categorySelected={categorySelected}
+          setCompareForSort={setCompareForSort}
+        />
+        <div className={styles.container}>
+          <NAvList
+            categorySelected={categorySelected}
+            setCategorySelected={setCategorySelected}
+          />
+          <div className={styles.itemsContainer}>
+            <ItemsContainer itemsData={itemsData} />
+          </div>
         </div>
       </div>
-      <div className={styles.container}>
-        <NAvList />
-        <div className={styles.itemsContainer}>
-          <ItemsContainer itemsData={itemsData} />
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
 

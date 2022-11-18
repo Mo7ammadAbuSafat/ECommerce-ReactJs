@@ -55,3 +55,24 @@
 .itemsContainer{
     width: calc(100% - 260px);
 }
+
+
+@media screen and (max-width:1150px){
+    .container,.header{
+        padding: 0 70px;    
+    }
+}
+@media screen and (max-width:750px){
+    .container,.header{
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:560px){
+    .container{
+       flex-direction: column;
+    }
+    .itemsContainer{
+        margin: auto;
+    }
+}
