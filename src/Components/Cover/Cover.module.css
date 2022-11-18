@@ -1,6 +1,6 @@
 .Cover{
-    height: 640px;
-    background-image: url("../../../public/icons/coverHomePage.png");
+    width: 100%;
+    height: calc(100vh - 120px);
     background-size: cover;
     display: flex;
     justify-content:space-between;

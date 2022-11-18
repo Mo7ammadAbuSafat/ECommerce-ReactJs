@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import styles from "./Popup.module.css";
 
 const PhotosPart = ({ data }) => {
   const [imgSrc, setImgSrc] = useState(data.imgs[0]);
   return (
-    <div className="photos">
-      <div className="miniPhotos">
+    <div className={styles.photos}>
+      <div className={styles.miniPhotos}>
         {data.imgs.map((item) => {
           return (
             <img
@@ -15,7 +16,7 @@ const PhotosPart = ({ data }) => {
           );
         })}
       </div>
-      <div className="mainPhoto">
+      <div className={styles.mainPhoto}>
         <img src={imgSrc} />
       </div>
     </div>
