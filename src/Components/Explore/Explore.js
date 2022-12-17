@@ -3,6 +3,7 @@ import styles from "./Explore.module.css";
 import Title from "../SharedComponents/Title";
 import CardT from "./CardT";
 import CardI from "./CardI";
+import { Link } from "react-router-dom";
 const items = [
   { name: "Kérastase: A Collaboration", imgSrc: "icons/r1.png" },
   {
@@ -41,7 +42,9 @@ const Explore = () => {
           <CardI {...items[2]} />
         </div>
       </div>
-      <div className={styles.button}>See the journal</div>
+      <Link className={styles.button} to="/JournalPage">
+        <div>See the journal</div>
+      </Link>
     </div>
   );
 };

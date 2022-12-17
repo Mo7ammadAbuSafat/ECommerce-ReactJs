@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Cover.module.css";
 
 const Text = () => {
   return (
     <div className={styles.text}>
       <h1>Perfume Tips Tricks</h1>
-      <span>Shop Now</span>
+      <Link to="/ShopPage">
+        <span>Shop Now</span>
+      </Link>
     </div>
   );
 };

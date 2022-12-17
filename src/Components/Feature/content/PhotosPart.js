@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Popup.module.css";
+import styles from "../Popup.module.css";
 
 const PhotosPart = ({ data }) => {
   const [imgSrc, setImgSrc] = useState(data.imgs[0]);

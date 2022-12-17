@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Shop.module.css";
 
 const ItemShop = ({ name, imgSrc }) => {
@@ -6,7 +7,9 @@ const ItemShop = ({ name, imgSrc }) => {
     <div className={styles.ItemShop}>
       <img src={imgSrc} />
       <div className={styles.name}>{name}</div>
-      <div className={styles.buttonForItem}>Shop Now</div>
+      <Link to="/ShopPage" className={styles.buttonForItem}>
+        <div>Shop Now</div>
+      </Link>
     </div>
   );
 };

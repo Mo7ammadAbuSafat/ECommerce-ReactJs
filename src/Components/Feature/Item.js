@@ -1,18 +1,18 @@
 import React from "react";
 import styles from "./Feature.module.css";
 
-const Item = ({ data, Index, setIndexShow, handleClickOpen }) => {
+const Item = ({ data, index, setIdShow, handleClickOpen }) => {
   const handleClickView = () => {
-    setIndexShow(Index);
+    setIdShow(data[index].id);
     handleClickOpen();
   };
   return (
     <div className={styles.Item}>
       <div className={styles.img}>
-        <img src={data[Index].imgs[0]} />
+        <img src={data[index].imgs[0]} />
         <div
           className={
-            styles.new2 + " " + (data[Index].isNew ? "" : styles.displayNone)
+            styles.new2 + " " + (data[index].isNew ? "" : styles.displayNone)
           }
         >
           new
@@ -22,8 +22,8 @@ const Item = ({ data, Index, setIndexShow, handleClickOpen }) => {
         </button>
       </div>
       <div className={styles.description}>
-        <p className={styles.name}>{data[Index].name}</p>
-        <p className={styles.price}>{"$" + data[Index].price + ".00"}</p>
+        <p className={styles.name}>{data[index].name}</p>
+        <p className={styles.price}>{"$" + data[index].price + ".00"}</p>
       </div>
     </div>
   );

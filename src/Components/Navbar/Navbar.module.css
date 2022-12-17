@@ -9,7 +9,7 @@
     font-style: normal;
     letter-spacing: 1px;
     text-align: left;
-    line-height: 40px;
+    /*line-height: 40px;*/
     text-transform: uppercase;
 }
 
@@ -29,12 +29,13 @@
     list-style-type: none;
 }
 
-.Navbar .LeftSubMenu li img{
+.Navbar .LeftSubMenu li .img{
     width: 6px;
     height: 3px;
 }
 
-.Navbar > img{
+
+.Navbar .img{
     width: 120px;
     margin-right: 40px;
 }
@@ -44,11 +45,23 @@
     align-items: center;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .LeftSubMenu li {
     display: flex;
     align-items: center;
     margin-right: 40px;
 }
+
+.LeftSubMenu li:hover{
+    color:orange;
+    cursor: pointer;
+}
+
+
 
 .LeftSubMenu li img{
     margin-left: 1px;
@@ -64,6 +77,11 @@
     display: flex;
     align-items: center;
     margin-left: 30px;
+}
+
+.RightSubMenu li:hover{
+    color:orange;
+    cursor: pointer;
 }
 
 .RightSubMenu .ul1 img{

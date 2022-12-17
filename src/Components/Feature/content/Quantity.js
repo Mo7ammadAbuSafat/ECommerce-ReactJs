@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Popup.module.css";
+import styles from "../Popup.module.css";
 
 const Quantity = (props) => {
   const [amount, setAmount] = useState(1);

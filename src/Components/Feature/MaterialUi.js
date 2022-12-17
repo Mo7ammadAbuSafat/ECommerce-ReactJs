@@ -4,7 +4,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import ContentPopup from "./ContentPopup";
+import ContentPopup from "./content/ContentPopup";
 
 export const Custom = ({ name, onClose }) => {
   return (
@@ -26,7 +26,8 @@ export const Custom = ({ name, onClose }) => {
   );
 };
 
-export default function MaxWidthDialog({ data, IndexShow, handleClose, open }) {
+export default function MaxWidthDialog({ data, IdShow, handleClose, open }) {
+  const index = data.findIndex((item) => item.id == IdShow);
   return (
     <React.Fragment>
       <Dialog
@@ -35,10 +36,10 @@ export default function MaxWidthDialog({ data, IndexShow, handleClose, open }) {
         open={open}
         onClose={handleClose}
       >
-        <Custom name={data[IndexShow].name} onClose={handleClose} />
+        <Custom name={data[index]?.name} onClose={handleClose} />
 
         <DialogContent>
-          <ContentPopup data={data[IndexShow]} />
+          <ContentPopup data={data[index]} />
         </DialogContent>
       </Dialog>
     </React.Fragment>

@@ -4,7 +4,7 @@ import styles from "./Feature.module.css";
 import Item from "./Item";
 
 function ItemsContainer({ itemsData }) {
-  const [IndexShow, setIndexShow] = useState(0);
+  const [IdShow, setIdShow] = useState(1);
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -20,8 +20,8 @@ function ItemsContainer({ itemsData }) {
       <Item
         kay={index}
         data={itemsData}
-        Index={index}
-        setIndexShow={setIndexShow}
+        index={index}
+        setIdShow={setIdShow}
         handleClickOpen={handleClickOpen}
       />
     );
@@ -31,7 +31,7 @@ function ItemsContainer({ itemsData }) {
       <div className={styles.itemsContainer}>{items}</div>
       <MaxWidthDialog
         data={itemsData}
-        IndexShow={IndexShow}
+        IdShow={IdShow}
         open={open}
         handleClose={handleClose}
       />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Popup.module.css";
+import styles from "../Popup.module.css";
 
 const SizePart = (props) => {
   const [size, setSize] = useState(null);
