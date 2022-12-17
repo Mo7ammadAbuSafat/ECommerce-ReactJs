@@ -37,7 +37,7 @@ const RightSubMenu = () => {
               <Link to="/ShopPage">shop</Link>
             </li>
             <li onClick={set}>
-              <Link to="/ExplorePage">explore</Link>
+              <Link to="/FabricPage">fabric</Link>
             </li>
             <li onClick={set}>
               <Link to="/JournalPage">journal</Link>

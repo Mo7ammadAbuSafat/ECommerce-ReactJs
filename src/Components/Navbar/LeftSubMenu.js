@@ -9,7 +9,7 @@ const LeftSubMenu = () => {
           <Link to="/ShopPage">shop</Link>
         </li>
         <li>
-          <Link to="/ExplorePage">explore</Link>
+          <Link to="/FabricPage">fabric</Link>
         </li>
         <li>
           <Link to="/JournalPage">journal</Link>
