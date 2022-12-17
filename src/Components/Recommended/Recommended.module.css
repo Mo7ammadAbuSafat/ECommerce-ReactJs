@@ -36,6 +36,10 @@
     top:-223px;
 }
 
+.ItemRec i:hover,.Recommended .button:hover{
+    cursor: pointer;
+}
+
 .Recommended .button{
     width: 150px;
     height: 40px;

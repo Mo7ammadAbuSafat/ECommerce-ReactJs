@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 const RightSubMenu = () => {
   const set = () => {
@@ -6,27 +7,21 @@ const RightSubMenu = () => {
       .getElementsByClassName(styles.div1)[0]
       .classList.toggle(styles.displayNone);
   };
-  const array = ["shop", "fabric", "journal", "about"];
-  const items = array.map((item) => {
-    return (
-      <li>
-        {item}
-        <i class="fa-solid fa-chevron-down"></i>
-      </li>
-    );
-  });
   return (
     <div className={styles.RightSubMenu}>
       <ul className={styles.ul1}>
-        <li>login</li>
         <li>
-          <img src="./icons/search.svg" />
+          <Link to="/LoginPage">login</Link>
         </li>
         <li>
-          <img src="./icons/heart.svg" />
+          <Link to="/WishlistPage">
+            <img src="./icons/heart.svg" />
+          </Link>
         </li>
         <li>
-          <img src="./icons/Shape.svg" />
+          <Link to="/CartPage">
+            <img src="./icons/Shape.svg" />
+          </Link>
         </li>
         <img
           onClick={set}
@@ -37,7 +32,20 @@ const RightSubMenu = () => {
 
       <div className={styles.burgerMenuItems}>
         <div className={styles.div1 + " " + styles.displayNone}>
-          <ul className={styles.ul2}>{items}</ul>
+          <ul className={styles.ul2}>
+            <li onClick={set}>
+              <Link to="/ShopPage">shop</Link>
+            </li>
+            <li onClick={set}>
+              <Link to="/ExplorePage">explore</Link>
+            </li>
+            <li onClick={set}>
+              <Link to="/JournalPage">journal</Link>
+            </li>
+            <li onClick={set}>
+              <Link to="/AboutPage">about</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
