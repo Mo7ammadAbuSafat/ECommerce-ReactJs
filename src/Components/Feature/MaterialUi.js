@@ -4,7 +4,8 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import ContentPopup from "./content/ContentPopup";
+import Content from "./content/Content";
+import ProductPageButton from "./content/ProductPageButton";
 
 export const Custom = ({ name, onClose }) => {
   return (
@@ -39,7 +40,7 @@ export default function MaxWidthDialog({ data, IdShow, handleClose, open }) {
         <Custom name={data[index]?.name} onClose={handleClose} />
 
         <DialogContent>
-          <ContentPopup data={data[index]} />
+          <Content data={data[index]} thereIsAFullItemButton={true} />
         </DialogContent>
       </Dialog>
     </React.Fragment>

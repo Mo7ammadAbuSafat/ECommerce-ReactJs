@@ -2,22 +2,18 @@ import React, { useState } from "react";
 import PhotosPart from "./PhotosPart";
 import DetailsPart from "./DetailsPart";
 import styles from "../Popup.module.css";
-import { Link } from "react-router-dom";
+import ProductPageButton from "./ProductPageButton";
 
-const ContentPopup = ({ data }) => {
+const Content = ({ data, thereIsAFullItemButton }) => {
   return (
     <>
       <div className={styles.body}>
         <PhotosPart data={data} />
         <DetailsPart data={data} />
       </div>
-      <div className={styles.footer}>
-        <Link to="/ProductPage">
-          <bottun>View Full product Details</bottun>
-        </Link>
-      </div>
+      {thereIsAFullItemButton && <ProductPageButton data={data} />}
     </>
   );
 };
 
-export default ContentPopup;
+export default Content;
