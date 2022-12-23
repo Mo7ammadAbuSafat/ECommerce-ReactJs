@@ -40,7 +40,11 @@ export default function MaxWidthDialog({ data, IdShow, handleClose, open }) {
         <Custom name={data[index]?.name} onClose={handleClose} />
 
         <DialogContent>
-          <Content data={data[index]} thereIsAFullItemButton={true} />
+          <Content
+            data={data[index]}
+            thereIsAFullItemButton={true}
+            handleClose={handleClose}
+          />
         </DialogContent>
       </Dialog>
     </React.Fragment>

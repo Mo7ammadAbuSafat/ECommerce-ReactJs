@@ -12,12 +12,15 @@ import LeftArrow from "../Components/Cover/LeftArrow";
 import RightArrow from "../Components/Cover/RightArrow";
 
 function HomePage() {
+  const imgSrc = [
+    "../icons/coverHomePage.png",
+    "../icons/coverHomePage1.png",
+    "../icons/coverHomePage2.png",
+  ];
   return (
     <>
-      <Cover imgSrc="../icons/coverHomePage.png">
-        <LeftArrow />
+      <Cover imgSrc={imgSrc}>
         <Text />
-        <RightArrow />
       </Cover>
       <Feature></Feature>
       <About />

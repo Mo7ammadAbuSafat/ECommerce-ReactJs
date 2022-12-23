@@ -25,7 +25,6 @@ const Recommended = () => {
     <div className={styles.Recommended}>
       <Title text="Recommended Videos" />
       <div className={styles.containerItemsRec}>{items}</div>
-      <div className={styles.button}>Show More</div>
     </div>
   );
 };

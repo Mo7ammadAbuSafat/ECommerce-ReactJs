@@ -9,7 +9,7 @@ const NamePriceRatePart = ({ data }) => {
     <div className={styles.namePriceRatePart}>
       <p className={styles.name}>{name}</p>
       <div className={styles.priceRate}>
-        <p className={styles.price}>SGD {price} </p>
+        <p className={styles.price}>${price} </p>
         <div className={styles.rate}>
           {[1, 2, 3, 4, 5].map((no) => {
             return (

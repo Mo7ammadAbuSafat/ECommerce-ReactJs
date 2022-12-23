@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Pages.module.css";
+import EmptyPageTitle from "../Components/EmptyPageTitle/EmptyPageTitle";
 
 function FabricPage(props) {
   return (
     <>
-      <div className={styles.pageContent}>Fabric Page</div>
+      <EmptyPageTitle text={"Fabric Page"} />
     </>
   );
 }

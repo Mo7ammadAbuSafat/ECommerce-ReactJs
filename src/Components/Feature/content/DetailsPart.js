@@ -5,13 +5,13 @@ import SizePart from "./SizePart";
 import Quantity from "./Quantity";
 import styles from "../Popup.module.css";
 
-function DetailsPart({ data }) {
+function DetailsPart({ data, handleClose }) {
   return (
     <div className={styles.details}>
       <NamePriceRatePart data={data} />
       <Description>{data.description}</Description>
       <SizePart />
-      <Quantity />
+      <Quantity data={data} handleClose={handleClose} />
     </div>
   );
 }

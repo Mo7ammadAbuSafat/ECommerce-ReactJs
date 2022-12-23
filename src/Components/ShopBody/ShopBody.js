@@ -28,7 +28,7 @@ function ShopBody(props) {
   }
   return (
     <>
-      <Cover imgSrc={"../icons/Apearals.png"}>
+      <Cover imgSrc={["../icons/Apearals.png"]}>
         <TitleForShop
           name={categorySelected[0] != "none" ? categorySelected[0] : "Shop"}
           description="White Gold began gaining popularity in the early 1900’s as an alternative to platinum. "
