@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState, useContext } from "react";
 import styles from "../Popup.module.css";
+import CartContext from "../../Store/CartContext";
 
-const Quantity = (props) => {
+const Quantity = ({ data, handleClose }) => {
+  const Cart = useContext(CartContext);
   const [amount, setAmount] = useState(1);
+  const id = data.id;
+  const quantityToSend = amount;
   return (
     <div className={styles.quantity}>
       <p>Quantity</p>
@@ -21,7 +26,17 @@ const Quantity = (props) => {
             +
           </div>
         </div>
-        <button>Add to cart</button>
+        <button
+          onClick={() => {
+            Cart.setCartItems([
+              ...Cart.cartItems,
+              { id: id, quantity: quantityToSend },
+            ]);
+            handleClose();
+          }}
+        >
+          Add to cart
+        </button>
         <i class="fa-solid fa-question"></i>
         <div className={styles.add}>Add to wishlist</div>
       </div>

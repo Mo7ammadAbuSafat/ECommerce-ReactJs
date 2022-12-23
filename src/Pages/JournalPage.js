@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Pages.module.css";
+import EmptyPageTitle from "../Components/EmptyPageTitle/EmptyPageTitle";
 
 function JournalPage(props) {
   return (
     <>
-      <div className={styles.pageContent}>Journal Page</div>
+      <EmptyPageTitle text={"Journal Page"} />
     </>
   );
 }

@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./Pages.module.css";
+import EmptyPageTitle from "../Components/EmptyPageTitle/EmptyPageTitle";
 
 function WishlistPage(props) {
   return (
     <>
-      <div className={styles.pageContent}>Wishlist Page</div>
+      <EmptyPageTitle text={"Wishlist Page"} />
     </>
   );
 }

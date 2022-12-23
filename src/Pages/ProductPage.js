@@ -5,15 +5,12 @@ import Content from "../Components/Feature/content/Content";
 import Data from "../Data";
 import Text from "../Components/ProductComponents/Text";
 import MayLike from "../Components/ProductComponents/MayLike";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 function ProductPage(props) {
-  const location = useLocation();
-  const { data } = location.state;
-  if (typeof location.state === "undefined") {
-    data = Data[0];
-  }
-
+  const { ProductId } = useParams();
+  console.log(ProductId);
+  const data = Data[Data.findIndex((item) => item.id == ProductId)];
   return (
     <>
       <div className={styles.ProductPage}>
@@ -23,7 +20,7 @@ function ProductPage(props) {
         <Content data={data} thereIsAFullItemButton={false} />
       </div>
       <div className={styles.image}>
-        <img src="icons/productPageImage.png" />
+        <img src="/icons/productPageImage.png" />
       </div>
       <Text />
       <div className={styles.container}>

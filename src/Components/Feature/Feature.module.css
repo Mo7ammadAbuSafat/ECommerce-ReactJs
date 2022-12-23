@@ -76,12 +76,31 @@
     border:none;
 }
 
-.buttonForItem:hover{
+.buttonForItem:hover ,.button{
     cursor: pointer;
 }
 
 .Item .img .displayNone{
     display:none;
+}
+
+.button{
+    width: 150px;
+    height: 40px;
+    opacity: 1;
+    color: rgba(255,255,255,1);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color: #33333A;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 @media screen and (max-width:900px){
