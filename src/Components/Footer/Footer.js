@@ -45,7 +45,7 @@ function Footer(props) {
         </div>
       </div>
 
-      <div className={styles.Copyright}>© Copyright Matter PTE LTD 2017</div>
+      <div className={styles.Copyright}>© Copyright Mohammad AbuSafat</div>
     </div>
   );
 }
