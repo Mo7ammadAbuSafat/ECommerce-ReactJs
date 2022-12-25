@@ -1,0 +1,48 @@
+.Login,.Registration{
+    height: calc(100vh - 120px);
+    background-image: url("/public/icons/coverLogin.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 450px;
+    margin: auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.container input{
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #33333A;
+}
+
+.container bottun{
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #33333A;
+    color:white;
+    margin: auto;
+}
+
+.container a{
+    color: brown;
+}
+
+
+.message{
+    margin: 10px 0;
+    color: orange;
+}

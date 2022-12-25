@@ -8,8 +8,6 @@ import Shop from "../Components/Shop/Shop";
 import Recommended from "../Components/Recommended/Recommended";
 import Seen from "../Components/Seen/Seen";
 import Text from "../Components/Cover/text";
-import LeftArrow from "../Components/Cover/LeftArrow";
-import RightArrow from "../Components/Cover/RightArrow";
 
 function HomePage() {
   const imgSrc = [
