@@ -9,28 +9,32 @@ function RegistrationContent(props) {
   const [cPassword, setCPassword] = useState();
   const [massage, setMassage] = useState("");
   const handleRegisterClick = () => {
-    fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCz1vbiPZTd_XnqF93sfLFIFqFMl-yc5Oc",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          email: email,
-          password: password,
-          returnSecureToken: true,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    ).then((res) => {
-      if (res.ok) {
-        setMassage("success registration");
-      } else {
-        return res.json().then((data) => {
-          setMassage(data.error.message);
-        });
-      }
-    });
+    if (password != cPassword) {
+      setMassage("passwords not match");
+    } else {
+      fetch(
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCz1vbiPZTd_XnqF93sfLFIFqFMl-yc5Oc",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            email: email,
+            password: password,
+            returnSecureToken: true,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      ).then((res) => {
+        if (res.ok) {
+          setMassage("success registration");
+        } else {
+          return res.json().then((data) => {
+            setMassage(data.error.message);
+          });
+        }
+      });
+    }
   };
   return (
     <div className={styles.Registration}>

@@ -5,6 +5,7 @@ import CartContext from "../Store/CartContext";
 import Data from "../../Data";
 import Title from "../SharedComponents/Title";
 import CartItem from "./CartItem";
+import EmptyPageTitle from "../EmptyPageTitle/EmptyPageTitle";
 
 function CartContainer() {
   const [total, setTotal] = useState();
@@ -35,9 +36,15 @@ function CartContainer() {
 
   return (
     <>
-      <Title text={"Cart"} />
-      <div className={styles.container}>{items}</div>
-      <h1 className={styles.h1}>Total Price = ${total}</h1>
+      {total > 0 ? (
+        <>
+          <Title text={"Cart"} />
+          <div className={styles.container}>{items}</div>
+          <h1 className={styles.h1}>Total Price = ${total}</h1>
+        </>
+      ) : (
+        <EmptyPageTitle text={"No Item"} />
+      )}
     </>
   );
 }
