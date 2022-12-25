@@ -18,6 +18,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import CartContext from "./Components/Store/CartContext";
 import ScrollToTop from "./Components/ScrollUp";
 import { useParams } from "react-router";
+import RegistrationPage from "./Pages/RegistrationPage";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/CartPage" element={<CartPage />} />
           <Route path="/WishlistPage" element={<WishlistPage />} />
           <Route path="/LoginPage" element={<LoginPage />} />
+          <Route path="/RegistrationPage" element={<RegistrationPage />} />
           <Route path="/ProductPage/:ProductId" element={<ProductPage />} />
           <Route path="*" element={<div>error 404</div>} />
         </Routes>

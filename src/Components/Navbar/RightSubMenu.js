@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import AuthContext from "../Store/AuthContext";
 import styles from "./Navbar.module.css";
 const RightSubMenu = () => {
+  const authContext = useContext(AuthContext);
   const set = () => {
     document
       .getElementsByClassName(styles.div1)[0]
@@ -10,8 +12,9 @@ const RightSubMenu = () => {
   return (
     <div className={styles.RightSubMenu}>
       <ul className={styles.ul1}>
-        <li>
-          <Link to="/LoginPage">login</Link>
+        <li onClick={() => authContext.logout()}>
+          {!authContext.isLoggedIn && <Link to="/LoginPage">login</Link>}
+          {authContext.isLoggedIn && "logout"}
         </li>
         <li>
           <Link to="/WishlistPage">
